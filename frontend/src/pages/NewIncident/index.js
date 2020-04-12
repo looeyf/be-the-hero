@@ -32,7 +32,7 @@ export default function NewIncident() {
           Authorization: ongId,
         },
       });
-      history.push("profile");
+      history.push("/profile");
     } catch (err) {
       alert("Erro ao cadastrar caso, tente novamente.");
     }
@@ -56,7 +56,7 @@ export default function NewIncident() {
           </Link>
         </section>
 
-        <form>
+        <form onSubmit={handleNewIncident}>
           <input
             placeholder="Título do caso"
             value={title}
